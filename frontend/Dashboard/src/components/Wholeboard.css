@@ -1,0 +1,53 @@
+.mainDiv {
+
+    border: 2px solid red;
+    height: 100vh;
+    width: 99vw;
+    display: grid;
+    grid-template-columns: 15% 60% 25%; 
+    grid-template-areas:
+        "sidebar midfirst rightfirst"
+        "sidebar  midsecond  rightsecond"
+        "sidebar midthird rightthird"
+    ;
+    grid-gap: 15px;
+
+
+}
+
+
+.first1 {
+    grid-area: sidebar;
+    background-color: red;
+    width: 20%;
+}
+
+.first2 {
+    grid-area: midfirst;
+    background-color: black;
+}
+
+.first3 {
+    grid-area: midsecond;
+    background-color: rgb(222, 140, 140);
+}
+
+.first4 {
+    grid-area: midthird;
+    background-color: yellow;
+}
+
+.first5 {
+    grid-area: rightfirst;
+    background-color: blue;
+}
+
+.first6 {
+    grid-area: rightsecond;
+    background-color: lightblue;
+}
+
+.first7 {
+    grid-area: rightthird;
+    background-color: aqua;
+}
