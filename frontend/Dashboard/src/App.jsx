@@ -1,5 +1,7 @@
 
+import AllRoutes from './AllRoutes'
 import './App.css'
+import Comparison from './components/Comparison'
 import Dashboard from './components/Dashboard'
 import Feedback from './components/Feedback'
 import Login from './components/Login'
@@ -13,12 +15,15 @@ function App() {
 
   return (
     <>
+
       {/* <SideBar/> */}
       {/* <Products/> */}
       {/* <Login/> */}
+      <AllRoutes/>
       {/* <Dashboard/> */}
-      <WholeDashboard/>
+      {/* <WholeDashboard/> */}
       {/* <Feedback/> */}
+      {/* <Comparison/> */}
     
     </>
   )

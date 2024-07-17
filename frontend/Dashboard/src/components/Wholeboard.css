@@ -5,6 +5,7 @@
     width: 99vw;
     display: grid;
     grid-template-columns: 15% 60% 25%; 
+ 
     grid-template-areas:
         "sidebar midfirst rightfirst"
         "sidebar  midsecond  rightsecond"

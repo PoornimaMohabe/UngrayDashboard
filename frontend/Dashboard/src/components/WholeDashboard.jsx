@@ -5,6 +5,7 @@ import Dashboard from './Dashboard'
 import Products from './Products'
 import Score from './Score'
 import Feedback from './Feedback'
+import Comparison from './Comparison'
 function WholeDashboard() {
     return (
         <div className='mainDiv'>
@@ -13,7 +14,7 @@ function WholeDashboard() {
 
             {/* Dashboard  mid */}
             <div className='common first2' > <Dashboard/></div>
-            <div className='common first3'></div>
+            <div className='common first3'><Comparison/></div>
             <div className='common first4'> <Products/></div>
 
             {/* right sidebar  right hand*/}

@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import "./Login.css"
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const loginUrl = "http://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1/login/";
+
+    const navigate = useNavigate();
+
+
 
     function handleLogin(e) {
         e.preventDefault();
@@ -15,15 +20,26 @@ function Login() {
             },
             body: JSON.stringify({
                 username,
-                password
+                email: "string",
+                password,
+                phone_number: "string",
+                input_code: "0"
             })
         })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            alert("User login successful");
-        })
-        .catch((err) => console.log(err));
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.message == "Successfully Logged in") {
+                    alert("User login successful");
+                    navigate("/dashboard");
+                }
+                else {
+                    alert(`${data.message}`)
+                }
+
+
+            })
+            .catch((err) => console.log(err));
     }
 
     return (
