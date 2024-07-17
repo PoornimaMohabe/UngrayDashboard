@@ -6,6 +6,7 @@ import Products from './Products'
 import Score from './Score'
 import Feedback from './Feedback'
 import Comparison from './Comparison'
+import Device from './Device'
 function WholeDashboard() {
     return (
         <div className='mainDiv'>
@@ -19,7 +20,7 @@ function WholeDashboard() {
 
             {/* right sidebar  right hand*/}
             <div className='common first5' ><Score/></div>
-            <div className='common first6'></div>
+            <div className='common first6'><Device/></div>
             <div className='common first7'><Feedback/></div>
         </div>
     )

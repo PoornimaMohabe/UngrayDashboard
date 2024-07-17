@@ -3,11 +3,9 @@ import React, { useState, useEffect } from 'react';
 function Products() {
     const [productData, setProductData] = useState([]);
 
-    const productUrl = "http://localhost:5000/product";
+    const productUrl = "https://july-assignment2-4.onrender.com/product";
 
-    // useEffect(() => {
-    //     fetchData();
-    // }, []);
+   
 
     function fetchData() {
         fetch(productUrl)

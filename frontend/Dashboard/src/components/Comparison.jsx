@@ -10,7 +10,7 @@ const Comparison = () => {
   const [lastYearData, setLastYearData] = useState([]);
 
   const fetchData = () => {
-    fetch('http://localhost:5000/comparison')
+    fetch('https://july-assignment2-4.onrender.com/comparison')
       .then(response => response.json())
       .then(data => {
         if (data.comparison) {
@@ -36,7 +36,7 @@ const Comparison = () => {
     scales: {
       x: {
         grid: {
-          display: false, // Hide vertical grid lines
+          display: false, 
         },
       },
       y: {
@@ -50,7 +50,7 @@ const Comparison = () => {
           max: 20000,
         },
         grid: {
-          color: 'rgba(200, 200, 200, 0.2)', // Light gray horizontal grid lines
+          color: 'rgba(200, 200, 200, 0.2)',
         },
       },
     },
