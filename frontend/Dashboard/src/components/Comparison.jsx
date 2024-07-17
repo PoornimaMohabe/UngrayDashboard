@@ -87,14 +87,14 @@ const Comparison = () => {
   };
 
   return (
-    <div className="p-6 border border-gray-300 bg-white" style={{ height: '400px', width: '100%' }}>
+    <div className="p-6   mb-0 bg-gray-50" style={{ height: '520px', width: '100%' }}>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Comparison</h2>
         <select name="timeRange" id="timeRange" className="border border-gray-300  rounded-full p-2">
           <option value="6 months">6 months</option>
         </select>
       </div>
-      <div style={{ height: '300px', width: '100%', display:"grid", placeItems:"center" }}>
+      <div style={{ height: '380px', width: '100%', display:"grid", placeItems:"center" }}>
         <Bar data={chartData} options={options} />
       </div>
     </div>

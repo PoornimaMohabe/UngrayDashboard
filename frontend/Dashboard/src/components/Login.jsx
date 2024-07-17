@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const loginUrl = "http://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1/login/";
+    const loginUrl = "https://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1/login/";
+
 
     const navigate = useNavigate();
 

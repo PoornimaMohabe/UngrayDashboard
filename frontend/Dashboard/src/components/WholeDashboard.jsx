@@ -14,10 +14,12 @@ function WholeDashboard() {
             <div className='common first1'> <SideBar/></div>
 
             {/* Dashboard  mid */}
-            <div className='common first2' > <Dashboard/></div>
-            <div className='common first3'><Comparison/></div>
-            <div className='common first4'> <Products/></div>
-
+            <div className='common first2' >
+                 <Dashboard/>
+                 <Comparison/>
+                 <Products/>
+                 </div>
+           
             {/* right sidebar  right hand*/}
             <div className='common first5' ><Score/></div>
             <div className='common first6'><Device/></div>

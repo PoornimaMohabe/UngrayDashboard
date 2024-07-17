@@ -39,12 +39,12 @@ const Feedback = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full bg-gray-100">
+    <div className="flex justify-center items-center rounded-3xl w-full bg-gray-300">
       <div className="bg-white rounded-lg shadow-md p-6 max-w-xl w-full">
         <div className="mt-4">
-          <h2 className="text-lg font-bold text-gray-800">Community Feedback</h2>
-          <h3 className="text-md font-semibold text-gray-700">Feedback Breakdown</h3>
-          <div className="mt-2 flex justify-between">
+          <h2 className="text-lg mb-4 font-semibold text-gray-800">Community Feedback</h2>
+          <h3 className="text-xl mb-4 font-bold text-gray-700">Feedback Breakdown</h3>
+          <div className="mt-2 mb-8 flex justify-between">
             {data.positive !== null && (
               <div className="w-1/3 flex flex-col items-center">
                 <div className="w-24 h-2 bg-green-100 rounded-full">

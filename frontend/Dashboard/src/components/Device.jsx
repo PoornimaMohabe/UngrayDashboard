@@ -50,15 +50,15 @@ const Device = () => {
       y: {
         beginAtZero: true,
         ticks: {
+          stepSize: 100,
           callback: function (value) {
-            return value === 0 ? '0' : value + 'k';
+            return value === 0 ? '0' : value;
           },
-          stepSize: 4000,
           min: 0,
-          max: 20000,
+          max: Math.max(...webSalesData, ...offlineSalesData) + 50,
         },
         grid: {
-          color: 'rgba(0, 0, 0, 0.1)',
+          color: 'rgba(0, 0, 0, 0.05)',
         },
       },
     },
@@ -85,34 +85,35 @@ const Device = () => {
         label: 'Web Sales',
         data: webSalesData,
         borderColor: 'rgb(75, 192, 192)',
+        backgroundColor:'rgb(75, 192, 192)',
         fill: false,
       },
       {
         label: 'Offline Sales',
         data: offlineSalesData,
         borderColor: 'rgb(153, 102, 255)',
+        backgroundColor:'rgb(153, 102, 255)',
         fill: false,
       },
     ],
   };
 
   return (
-    <div className="p-6 border border-gray-200 rounded-lg">
+    <div className="p-6 border bg-white rounded-3xl">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold">Customers by Devices</h2>
-       
+        <h2 className="text-2xl mt-4 mb-4 font-bold">Customers by Device</h2>
       </div>
-      <div className="w-full h-64">
-        <Line data={chartData} options={options} />
+      <div className="w-full " style={{ height: '300px' }}> 
+        <Line data={chartData} options={options} style={{ height: '250px' }} />
       </div>
-      <div className="mt-4">
+      <div className="mt-2">
         <div className="flex justify-between">
           <div className="text-center">
-            <p className="font-bold text-lg">Web Sales</p>
-            <p className="text-2xl font-bold">{webSalesPercentage}%</p>
+            <p className="text-gray-400 font-bold text-lg">Web Sales</p>
+            <p className="text-xl font-bold">{webSalesPercentage}%</p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-lg">Offline Sales</p>
+            <p className="font-bold text-gray-400 text-lg">Offline Sales</p>
             <p className="text-2xl font-bold">{offlineSalesPercentage}%</p>
           </div>
         </div>
