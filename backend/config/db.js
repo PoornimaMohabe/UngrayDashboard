@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
+require('dotenv').config()
 
-const connectiontodb = mongoose.connect("mongodb://localhost:27017/UngrayDashboard")
+const connectiontodb = mongoose.connect(process.env.mongourl)
 
 
 module.exports = {
