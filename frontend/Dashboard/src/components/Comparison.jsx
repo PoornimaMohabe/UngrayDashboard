@@ -74,13 +74,13 @@ const Comparison = () => {
       {
         label: 'This Year',
         data: thisYearData,
-        backgroundColor: 'rgb(105, 50, 122)',
+        backgroundColor: '#d5def5',
         borderRadius: 5,
       },
       {
         label: 'Last Year',
         data: lastYearData,
-        backgroundColor: 'rgb(50, 100, 135)',
+        backgroundColor: ' #927fbf ',
         borderRadius: 5,
       },
     ],

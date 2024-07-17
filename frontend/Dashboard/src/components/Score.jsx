@@ -44,7 +44,7 @@ const Score = () => {
     const radius = Math.min(width, 2 * height) / 2;
     const thickness = 12;
     const borderRadius= 5;
-    const colors = ["rgb(105, 50, 122)", "#F5F5F5"];
+    const colors = ["#927fbf", "#F5F5F5"];
 
    
     d3.select(chartRef.current).select("svg").remove();
