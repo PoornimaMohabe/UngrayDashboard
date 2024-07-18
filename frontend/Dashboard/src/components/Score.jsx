@@ -14,7 +14,7 @@ const Score = () => {
     const headers = new Headers();
     headers.set('Authorization', 'Basic ' + btoa(`${username}:${password}`));
 
-    fetch(url, { headers })
+    fetch(url)
       .then(res => res.json())
       .then((data) => {
         console.log(data);
@@ -31,6 +31,8 @@ const Score = () => {
 
   console.log(data1.score);
 
+  const  title = data1.title || "You are Good"
+const message = data1.message || "Your sale performance is better then others"
   useEffect(() => {
    
     const value = data1.score / 100 || 0.78;
@@ -90,8 +92,8 @@ const Score = () => {
         <div className="flex flex-col mb-4">
           <div className="graph relative  mt-7 m-auto" ref={chartRef}></div>
           <hr className="w-full border-t mt-20 border-gray-300 my-4" />
-          <h1 className="text-2xl  font-bold mt-4 mb-6 text-gray-800 ">{data1.title}</h1>
-          <h3 className="text-gray-400  text-lg">{data1.message}</h3>
+          <h1 className="text-2xl  font-bold mt-4 mb-6 text-gray-800 ">{title}</h1>
+          <h3 className="text-gray-400  text-lg">{message}</h3>
           <button className="mt-6 w-52 text-black px-4 py-2 rounded-full text-lg font-bold border border-x-gray-300">Improve your score</button>
         </div>
       </div>
