@@ -1,8 +1,10 @@
 import React from 'react';
 
+
+
 function Dashboard() {
     return (
-        <div className="p-4 bg-gray-50 w-4/4 mb-7">
+        <div className="p-4 bg-gray-50 w-full mb-7">
             <div className='flex justify-between items-center mt-10'>
                 <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
                 <div className='flex items-center space-x-2'>

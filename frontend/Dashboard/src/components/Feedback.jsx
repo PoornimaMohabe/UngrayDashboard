@@ -50,7 +50,7 @@ const Feedback = () => {
   };
 
   return (
-    <div className="flex justify-center items-center rounded-3xl w-full bg-gray-300">
+    <div className="flex justify-center items-center rounded-3xl w-full bg-white-300">
       <div className="bg-white rounded-lg shadow-md p-6 max-w-xl w-full">
         <div className="mt-4">
           <h2 className="text-lg mb-4 font-semibold text-gray-800">Community Feedback</h2>

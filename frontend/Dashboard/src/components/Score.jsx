@@ -87,7 +87,7 @@ const message = data1.message || "Your sale performance is better then others"
   }, [data1]);
 
   return (
-    <div className="flex justify-center items-center w-4/4 bg-gray-300">
+    <div className="flex justify-center items-center w-full bg-white-300">
       <div className="bg-white rounded-lg shadow-md p-6 max-w-xl w-full">
         <div className="flex flex-col mb-4">
           <div className="graph relative  mt-7 m-auto" ref={chartRef}></div>
